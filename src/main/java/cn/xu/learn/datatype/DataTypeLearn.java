@@ -32,7 +32,7 @@ public class DataTypeLearn {
         Byte a = new Byte("2");
         Byte b=2;
         Byte c =Byte.valueOf("2");
-        Byte b =Byte.parseByte("2");
+        //Byte b =Byte.parseByte("2");
 
     }
 }
