@@ -1,10 +1,6 @@
 package cn.xu.learn.datatype;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.junit.Test;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by william on 16/8/22.
