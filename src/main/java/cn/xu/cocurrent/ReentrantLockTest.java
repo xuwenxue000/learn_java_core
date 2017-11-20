@@ -1,6 +1,6 @@
-package com.xu.base;
+package cn.xu.cocurrent;
 
-import org.junit.Test;
+//import org.junit.Test;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -36,7 +36,7 @@ public class ReentrantLockTest {
         }
     }
 
-    @Test
+    //@Test
     public void test(){
 
         TestThread t1 = new TestThread();

@@ -1,6 +1,6 @@
-package com.xu.base;
+package cn.xu.cocurrent;
 
-import org.junit.Test;
+//import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class CountDownLatchTest {
 
-    @Test
+    //@Test
     public void test(){
         final  CountDownLatch latch= new CountDownLatch(2);
         final Map<String,String> map=new HashMap();

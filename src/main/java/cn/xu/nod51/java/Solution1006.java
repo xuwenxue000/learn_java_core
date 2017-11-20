@@ -3,6 +3,9 @@ package cn.xu.nod51.java;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class Solution1006 {
 
    public static void main(String[] args) {

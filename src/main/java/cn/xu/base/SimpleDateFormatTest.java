@@ -1,4 +1,4 @@
-package com.xu.base;
+package cn.xu.base;
 
 import org.junit.Test;
 
