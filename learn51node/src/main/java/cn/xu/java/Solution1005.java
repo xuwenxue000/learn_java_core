@@ -51,13 +51,96 @@ public class Solution1005 {
        }
        return result.reverse().toString();
    }
+    public static String minus(String a,String b,boolean lt){
+        //return new BigDecimal(a).add(new BigDecimal(b)).toString();
+        int alen = a.length();
+        int blen = b.length();
+        if(a.equals(b)){
+            return "0";
+        }
+        if(alen<blen){
+            return "-"+minus(b,a,true);
+        }
+        if(alen==blen&&!lt){
+            for(int i=0;i<alen;i++){
+                int an = Integer.valueOf(a.charAt(i)+"");
+                int bn = Integer.valueOf(b.charAt(i)+"");
+                if(bn>an){
+                    return "-"+minus(b,a,true);
+                }
+                if(bn<an){
+                    break;
+                }
+
+            }
+        }
+        StringBuilder result =new StringBuilder();
+        int last=0;
+        for(int i=0;i<alen||i<blen;i++){
+            int an =0;
+            if(i<alen){
+                an = Integer.valueOf(a.charAt(alen-i-1)+"");
+            }
+            int bn =0;
+            if(i<blen){
+                bn = Integer.valueOf(b.charAt(blen-i-1)+"");
+            }
+            int n = an-bn-last;
+            if(n<0){
+                n+=10;
+                last=1;
+            }else{
+                last=0;
+            }
+            //System.out.println(an+"+"+bn+"="+n +" %"+last);
+            result.append(n);
+        }
+        while(result.toString().endsWith("0")){
+            result.deleteCharAt(result.length()-1);
+        }
+        if(last>1){
+            result.append("-");
+        }
+        return result.reverse().toString();
+    }
+
+
+   public static String addSign(String a,String b){
+       boolean aPlus=true;
+       boolean bPlus=true;
+       if(a.startsWith("-")){
+           aPlus=false;
+           a = a.substring(1);
+
+       }
+       if(b.startsWith("-")){
+           bPlus=false;
+           b = b.substring(1);
+       }
+       if(aPlus&&bPlus){
+           return add(a,b);
+       }
+       if(!aPlus&&!bPlus){
+           return "-"+add(a,b);
+       }
+
+       if(aPlus){
+           return minus(a,b,false);
+       }
+       if(bPlus){
+           return minus(b,a,false);
+       }
+       return "";
+   }
+
+
 
    public static void main(String[] args) {
       Scanner in = new Scanner(System.in);
       PrintWriter out = new PrintWriter(System.out);
       String a = in.nextLine();
       String b = in.nextLine();
-      out.println(add(a,b));
+      out.println(addSign(a,b));
       out.flush();
    }
 }

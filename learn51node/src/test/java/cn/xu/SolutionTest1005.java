@@ -26,8 +26,11 @@ public class SolutionTest1005 {
 
    @Test
    public void test(){
-      String result = Solution1005.add("68932147586","468711654886");
-      System.out.println("68932147586,468711654886");
+      String result = Solution1005.addSign("68932147586","468711654886");
       Assert.assertEquals("537643802472",result);
+
+
+      result = Solution1005.addSign("20","-21");
+      Assert.assertEquals("-1",result);
    }
 }
