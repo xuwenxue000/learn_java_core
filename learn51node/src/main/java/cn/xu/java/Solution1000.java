@@ -1,4 +1,4 @@
-package cn.xu.nod51.java;
+package cn.xu.java;
 
 import java.io.*;
 import java.util.*;
@@ -16,14 +16,19 @@ import java.util.*;
  3
  */
 public class Solution1000 {
+
+   public static int add(int a,int b){
+      return a+b;
+   }
+
    public static void main(String[] args) {
       PrintWriter out = new PrintWriter(System.out);
-      //out.println(Integer.MAX_VALUE);
+      //out.println(Integer.MAX_VALUE);//2147483647>1000000000
       //out.println(Integer.MAX_VALUE>1000000000);
       Scanner in = new Scanner(System.in);
       int a = in.nextInt();
       int b = in.nextInt();
-      out.println(a + b);
+      out.println(add(a,b));
       out.flush();
    }
 }

@@ -1,4 +1,4 @@
-package cn.xu.nod51.java;
+package cn.xu.java;
 
 import java.io.PrintWriter;
 import java.util.Scanner;
