@@ -3,11 +3,7 @@ package cn.xu.base;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by william on 2017/2/21.

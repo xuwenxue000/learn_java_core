@@ -17,9 +17,10 @@ import java.util.*;
  */
 public class Solution1000 {
    public static void main(String[] args) {
-      Scanner in = new Scanner(System.in);
       PrintWriter out = new PrintWriter(System.out);
-      out.println(Integer.MAX_VALUE);
+      //out.println(Integer.MAX_VALUE);
+      //out.println(Integer.MAX_VALUE>1000000000);
+      Scanner in = new Scanner(System.in);
       int a = in.nextInt();
       int b = in.nextInt();
       out.println(a + b);
