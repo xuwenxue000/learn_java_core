@@ -4,27 +4,21 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
- * 输入2个正整数A，B，求A与B的最大公约数。(GCD)
+ * *输入2个正整数A，B，求A与B的最小公倍数。(LCM)
  Input
  2个数A,B，中间用空格隔开。(1<= A,B <= 10^9)
  Output
- 输出A与B的最大公约数。
+ 输出A与B的最小公倍数。
  Input示例
  30 105
  Output示例
- 15
-
- 碾转相除法
-
-
+ 210
  */
-public class Solution1011 {
-
-   public static String  solve(int a, int b){
-      String result;
+public class Solution1012 {
+   public static int  gcd(int a, int b){
+      int r;
       while(true){
-         int c =0;
-         int r = 0;
+         int c;
          if(a>b){
             c = a%b;
             a =c;
@@ -35,10 +29,15 @@ public class Solution1011 {
             r = a;
          }
          if(c==0){
-            result = r+"";
             break;
          }
       }
+
+      return r;
+   }
+   public static String  solve(int a, int b){
+      long gcd=  gcd(a,b);
+      String result=(a/gcd)*b+"";
 
       return result;
    }
